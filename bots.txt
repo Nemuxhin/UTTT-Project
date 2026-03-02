@@ -1,3 +1,4 @@
+BobBot
 Drunken Bot
 ExampleSneakyBot
 Local Prio ListBot
