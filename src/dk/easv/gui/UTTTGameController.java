@@ -2,8 +2,6 @@ package dk.easv.gui;
 
 import com.jfoenix.controls.JFXButton;
 
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
-import de.jensd.fx.glyphs.fontawesome.utils.FontAwesomeIconFactory;
 import dk.easv.bll.bot.*;
 
 import dk.easv.bll.field.IField;
@@ -11,7 +9,7 @@ import dk.easv.bll.game.GameManager;
 import dk.easv.bll.game.stats.GameResult;
 import dk.easv.bll.move.IMove;
 import dk.easv.bll.move.Move;
-import static dk.easv.gui.UTTTGameController.FontAwesomeHelper.getFontAwesomeIconFromPlayerId;
+import static dk.easv.gui.util.FontAwesomeHelper.getFontAwesomeIconFromPlayerId;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -388,25 +386,5 @@ public class UTTTGameController implements Initializable {
 
     public void setStatsModel(StatsModel statsModel) {
         this.statsModel = statsModel;
-    }
-
-    /**
-     *
-     * @author jeppjleemoritzled
-     */
-    public static class FontAwesomeHelper {
-        public static Text getFontAwesomeIconFromPlayerId(String playerId) throws RuntimeException {
-            switch (playerId) {
-                case "0":
-
-                    return FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.DIAMOND);
-                case "1":
-                    return FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.TRASH);
-                case "TIE":
-                    return FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.BLACK_TIE);
-                default:
-                    throw new RuntimeException("PlayerId not valid");
-            }
-        }
     }
 }

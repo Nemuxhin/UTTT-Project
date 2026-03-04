@@ -5,7 +5,7 @@ import dk.easv.bll.bot.IBot;
 import dk.easv.bll.game.GameManager;
 import dk.easv.bll.game.stats.GameResult;
 import dk.easv.dal.DynamicBotClassHandler;
-import static dk.easv.gui.UTTTGameController.FontAwesomeHelper.getFontAwesomeIconFromPlayerId;
+import static dk.easv.gui.util.FontAwesomeHelper.getFontAwesomeIconFromPlayerId;
 import static dk.easv.dal.DynamicBotClassHandler.loadBotList;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -123,7 +123,7 @@ public class AppController implements Initializable {
             statsWindow = new Stage();
             statsWindow.initModality(Modality.WINDOW_MODAL);
             FXMLLoader fxLoader = new FXMLLoader(
-                    getClass().getResource("dk/easv/gui/Stats.fxml"));
+                    getClass().getResource("Stats.fxml"));
 
             Parent root = fxLoader.load();
 
@@ -314,7 +314,7 @@ public class AppController implements Initializable {
         else {
             Stage primaryStage = new Stage();
             primaryStage.initModality(Modality.WINDOW_MODAL);
-            FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("/dk/easv/gui/UTTTGame.fxml"));
+            FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("UTTTGame.fxml"));
 
             Parent root = fxLoader.load();
 

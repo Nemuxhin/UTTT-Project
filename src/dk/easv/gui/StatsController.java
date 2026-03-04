@@ -8,7 +8,7 @@ package dk.easv.gui;
 import com.jfoenix.controls.JFXListView;
 import dk.easv.bll.game.stats.GameResult;
 import dk.easv.bll.game.stats.GameResult.Winner;
-
+import dk.easv.gui.util.FontAwesomeHelper;
 import java.net.URL;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
@@ -55,19 +55,19 @@ public class StatsController implements Initializable {
         @Override
         protected void updateItem(GameResult item, boolean empty) {
             super.updateItem(item, empty);
-            Node fontAwe= UTTTGameController.FontAwesomeHelper.getFontAwesomeIconFromPlayerId("TIE");
+            Node fontAwe=FontAwesomeHelper.getFontAwesomeIconFromPlayerId("TIE");
             this.getStyleClass().removeAll(allPlayerstyles);
             String winName = "Tie";
             String styleClass = "playerTIE";
             if (!empty && item != null) {
                 if(item.getWinner()==Winner.player0) {
                     fontAwe =
-                        UTTTGameController.FontAwesomeHelper.getFontAwesomeIconFromPlayerId("0");
+                        FontAwesomeHelper.getFontAwesomeIconFromPlayerId("0");
                     winName = item.getPlayer0();
                     styleClass=("player0");
                 } else if (item.getWinner()==Winner.player1) {
                     fontAwe =
-                        UTTTGameController.FontAwesomeHelper.getFontAwesomeIconFromPlayerId("1");
+                        FontAwesomeHelper.getFontAwesomeIconFromPlayerId("1");
                     winName = item.getPlayer1();
                     styleClass=("player1");
                 }
