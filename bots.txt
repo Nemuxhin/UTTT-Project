@@ -1,7 +1,9 @@
 Drunken Bot
 ExampleSneakyBot
+James's Bot
 Local Prio ListBot
 PrioList on Steroids
 Random Dude
 Random on Steroids
 Teacher Bot (online)
+teacher (REST)
